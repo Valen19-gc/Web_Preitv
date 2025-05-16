@@ -1,0 +1,1685 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe de ITV</title>
+    <link rel="stylesheet" href="formulario_preitv.css">
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+  emailjs.init({
+    publicKey: "ITB1j-uoglJsRbv74",
+  });
+})();
+</script>
+
+</head>
+<body>
+    <form id="inspeccionForm" method="post" action="formulario_preitv.php">
+    <header>
+        <div class="arriba">
+        <nav>
+            <ul class="nav-table">
+                <li><a href="index.html"><img src="Imagenes/PreITVlogo.jpg" id="ITVimg"></a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Form_reto.html">Cita Previa</a></li>
+                <li class="login-empleados"><button><a href="login.html">Admin</a></button></li>
+            </ul>
+        </nav>
+    </div>
+    </header>
+    <div class="container">
+            <div class="section">
+                <div class="sectiona">
+                    <table class="itv-forma">
+                        <tr class="header-rowa">
+                            <td colspan="4" style="color: white;">A - Identificación de la estación ITV y del vehículo</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div class="form-groupa">
+                                    <label>Código estación:</label>
+                                    <input type="text" class="form-controla" value="">
+                                </div>
+                            </td>
+                            <td colspan="2">
+                                <div class="form-groupa">
+                                    <span class="small-texta">(3)</span>
+                                    <label>Grupo ITEVELESA S.L.U. Pol Ind. Requejada Parc. R31 POLANCO 39313 CANTABRIA 942824682</label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="form-groupa">
+                                    <label>Clasificación vehículo:</label>
+                                    <input type="text" class="form-controla" value="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-groupa">
+                                    <span class="small-texta">(5)</span>
+                                    <label>Categoría:</label>
+                                    <input type="text" class="form-controla" value="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-groupa">
+                                    <label>Línea/s:</label>
+                                    <input type="text" class="form-controla" value="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-groupa">
+                                    <span class="small-texta">(4)</span>
+                                    <label>Lectura del cuentakm/horas:</label>
+                                    <input type="text" class="form-controla" value="">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div class="form-groupa">
+                                    <label>Marca/Modelo:</label>
+                                    <input type="text" class="form-controla" value="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-groupa">
+                                    <span class="small-texta">(1)</span>
+                                    <label>Nº Bastidor:</label>
+                                    <input type="text" class="form-controla" value="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-groupa">
+                                    <span class="small-texta">(2)</span>
+                                    <label>MATRÍCULA ACTUAL:</label>
+                                    <input type="text" class="form-controla" value="">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="form-groupa">
+                                    <label>Tipo vehículo:</label>
+                                    <input type="text" class="form-controla" value="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-groupa">
+                                    <label>Contraseña de homologación:</label>
+                                    <input type="text" class="form-controla" value="">
+                                </div>
+                            </td>
+                            <td colspan="2">
+                                <div class="form-groupa">
+                                    <label>INFORME ITV Nº:</label>
+                                    <input type="text" class="form-controla" value="">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="form-groupa">
+                                    <label>Fecha 1ª Matriculación:</label>
+                                    <input type="text" class="form-controla" value="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-groupa">
+                                    <span class="small-texta">(3)</span>
+                                    <label>Fecha de inspección:</label>
+                                    <input type="text" class="form-controla" value="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-groupa">
+                                    <span class="small-texta">(8)</span>
+                                    <label>Fecha de próxima inspección:</label>
+                                    <input type="text" class="form-controla" value="">
+                                </div>
+                            </td>
+                            <td rowspan="2">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="form-groupa">
+                                    <label>Factura Nº:</label>
+                                    <input type="text" class="form-controla" value="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-groupa">
+                                    <label>Tarifa:</label>
+                                    <input type="text" class="form-controla" style="width: 70%;" value="">
+                                    <span><b>€</b></span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-groupa">
+                                    <label>Tipo de inspección:</label>
+                                    <select class="form-controla">
+                                        <option selected>PERIODICA</option>
+                                        <option>PRIMERA MATRICULACION</option>
+                                        <option>REFORMA</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+       <!-- Section B - Alcance y trazabilidad -->
+<div class="container">
+    <div class="section">
+        <form id="inspeccionForm">
+            <table>
+                <tr>
+                    <td colspan="11" class="header-rowa" style="background-color: #0056b3; color: white;">B - Alcance y trazabilidad de la inspección</td>
+                </tr>
+                <tr>
+                    <td class="section">01.</td>
+                    <td class="section" colspan="2">IDENTIFICACIÓN</td>
+                    <td>03.07</td>
+                    <td>Disp.retención carga</td>
+                    <td>
+                        <select name="item_03_07">
+                            <option value="OK">OK</option>
+                            <option value="DG">DG</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>06.02</td>
+                    <td>Freno de socorro</td>
+                    <td>
+                        <select name="item_06_02">
+                            <option value="OK">OK</option>
+                            <option value="DG">DG</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td class="section">08.</td>
+                    <td class="section" colspan="2">EJES, RUEDAS, NEUMÁTICOS, SUSPENSIÓN</td>
+                </tr>
+                <tr>
+                    <td>01.01</td>
+                    <td>Documentación</td>
+                    <td>
+                        <select name="item_01_01">
+                            <option value="OK">OK</option>
+                            <option value="DG">DG</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>03.08</td>
+                    <td>Indicador velocidad</td>
+                    <td>
+                        <select name="item_03_08">
+                            <option value="OK">OK</option>
+                            <option value="DG">DG</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>06.03</td>
+                    <td>Freno estacionamien.</td>
+                    <td>
+                        <select name="item_06_03">
+                            <option value="OK">OK</option>
+                            <option value="DG">DG</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>08.01</td>
+                    <td>Ejes</td>
+                    <td>
+                        <select name="item_08_01">
+                            <option value="OK">OK</option>
+                            <option value="DG">DG</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>01.02</td>
+                    <td>Número Bastidor</td>
+                    <td>
+                        <select name="item_01_02">
+                            <option value="OK">OK</option>
+                            <option value="DG">DG</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>03.09</td>
+                    <td>Salientes interiores</td>
+                    <td>
+                        <select name="item_03_09">
+                            <option value="OK">OK</option>
+                            <option value="DG">DG</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>06.04</td>
+                    <td>Freno de inercia</td>
+                    <td>
+                        <select name="item_06_04">
+                            <option value="OK">OK</option>
+                            <option value="DG">DG</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>08.02</td>
+                    <td>Ruedas</td>
+                    <td>
+                        <select name="item_08_02">
+                            <option value="OK">OK</option>
+                            <option value="DG">DG</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>01.03</td>
+                    <td>Placas de Matrícula</td>
+                    <td>
+                        <select name="item_01_03">
+                            <option value="OK">OK</option>
+                            <option value="DG">DG</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>03.10</td>
+                    <td>Eje exc.veh.M2 y M3</td>
+                    <td>
+                        <select name="item_03_10">
+                            <option value="OK">OK</option>
+                            <option value="DG">DG</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>06.05</td>
+                    <td>Disp.antibloqueo</td>
+                    <td>
+                        <select name="item_06_05">
+                            <option value="OK">OK</option>
+                            <option value="DG">DG</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>08.03</td>
+                    <td>Neumáticos</td>
+                    <td>
+                        <select name="item_08_03">
+                            <option value="OK">OK</option>
+                            <option value="DG">DG</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="section">02.</td>
+                    <td class="section" colspan="2">ACOND. EXTERIOR, CARROCERÍA Y CHASIS</td>
+                    <td class="section">04.</td>
+                    <td class="section" colspan="2">ALUMBRADO Y SEÑALIZACIÓN</td>
+                    <td>06.06</td>
+                    <td>Disp.desaceleración</td>
+                    <td>
+                        <select name="item_06_06">
+                            <option value="OK">OK</option>
+                            <option value="DG">DG</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>08.04</td>
+                    <td>Suspensión</td>
+                    <td>
+                        <select name="item_08_04">
+                            <option value="OK">OK</option>
+                            <option value="DG">DG</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>02.01</td>
+                    <td>Antiempot.delantero</td>
+                    <td>
+                        <select name="item_02_01">
+                            <option value="OK">OK</option>
+                            <option value="DG">DG</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>04.01</td>
+                    <td>Luces cruce y carre.</td>
+                    <td>
+                        <select name="item_04_01">
+                            <option value="OK">OK</option>
+                            <option value="DG">DG</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>06.07</td>
+                    <td>Pedal disp.frenado</td>
+                    <td>
+                        <select name="item_06_07">
+                            <option value="OK">OK</option>
+                            <option value="DG">DG</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td class="section">09.</td>
+                    <td class="section" colspan="2">MOTOR Y TRANSMISIÓN</td>
+                </tr>
+                <tr>
+                    <td>02.02</td>
+                    <td>Carrocería y chasis</td>
+                    <td>
+                        <select name="item_02_02">
+                            <option value="OK">OK</option>
+                            <option value="DG">DG</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>04.02</td>
+                    <td>Luz de marcha atrás</td>
+                    <td>
+                        <select name="item_04_02">
+                            <option value="OK">OK</option>
+                            <option value="DG">DG</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>06.08</td>
+                    <td>S.vac.o comp. y dep.</td>
+                    <td>
+                        <select name="item_06_08">
+                            <option value="OK">OK</option>
+                            <option value="DG">DG</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>09.01</td>
+                    <td>Estad.general motor</td>
+                    <td>
+                        <select name="item_09_01">
+                            <option value="OK">OK</option>
+                            <option value="DG">DG</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>02.03</td>
+                    <td>Dispos.acoplamiento</td>
+                    <td>
+                        <select name="item_02_03">
+                            <option value="OK">OK</option>
+                            <option value="DG">DG</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>04.03</td>
+                    <td>Luces indi.dirección</td>
+                    <td>
+                        <select name="item_04_03">
+                            <option value="OK">OK</option>
+                            <option value="DG">DG</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>06.09</td>
+                    <td>Indicad.baja presión</td>
+                    <td>
+                        <select name="item_06_09">
+                            <option value="OK">OK</option>
+                            <option value="DG">DG</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>09.02</td>
+                    <td>Sistema alimentación</td>
+                    <td>
+                        <select name="item_09_02">
+                            <option value="OK">OK</option>
+                            <option value="DG">DG</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>02.04</td>
+                    <td>Guardab.y disp.antip.</td>
+                    <td>
+                        <select name="item_02_04">
+                            <option value="OK">OK</option>
+                            <option value="DG">DG</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>04.04</td>
+                    <td>Señal de emergencia</td>
+                    <td>
+                        <select name="item_04_04">
+                            <option value="OK">OK</option>
+                            <option value="DG">DG</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>06.10</td>
+                    <td>Val.reg.freno mano</td>
+                    <td>
+                        <select name="item_06_10">
+                            <option value="OK">OK</option>
+                            <option value="DG">DG</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>09.03</td>
+                    <td>Sistema de escape</td>
+                    <td>
+                        <select name="item_09_03">
+                            <option value="OK">OK</option>
+                            <option value="DG">DG</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>02.05</td>
+                    <td>Limpia y Lavaparabr.</td>
+                    <td>
+                        <select name="item_02_05">
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>04.05</td>
+                    <td>Luces de frenado</td>
+                    <td>
+                        <select name="item_04_05">
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>06.11</td>
+                    <td>Válvulas de frenado</td>
+                    <td>
+                        <select name="item_06_11">
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>09.04</td>
+                    <td>Transmisión</td>
+                    <td>
+                        <select name="item_09_04">
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>02.06</td>
+                    <td>Protecciones latera.</td>
+                    <td>
+                        <select name="item_02_06">
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>04.06</td>
+                    <td>Luz placa mat.trase.</td>
+                    <td>
+                        <select name="item_04_06">
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>06.12</td>
+                    <td>Acum.o dep. presión</td>
+                    <td>
+                        <select name="item_06_12">
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>09.05</td>
+                    <td>Veh.util.gas carbur.</td>
+                    <td>
+                        <select name="item_09_05">
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>02.07</td>
+                    <td>Protección trasera</td>
+                    <td>
+                        <select name="item_02_07">
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>04.07</td>
+                    <td>Luces de posición</td>
+                    <td>
+                        <select name="item_04_07">
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>06.13</td>
+                    <td>Acop.frenos remolque</td>
+                    <td>
+                        <select name="item_06_13">
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td class="section">10.</td>
+                    <td class="section" colspan="2">OTROS</td>
+                </tr>
+                <tr>
+                    <td>02.08</td>
+                    <td>Puertas y peldaños</td>
+                    <td>
+                        <select name="item_02_08">
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>04.08</td>
+                    <td>Luces antiniebla</td>
+                    <td>
+                        <select name="item_04_08">
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>06.14</td>
+                    <td>Servofreno cilín.ma.</td>
+                    <td>
+                        <select name="item_06_14">
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>10.01</td>
+                    <td>Trans.mer.peligrosas</td>
+                    <td>
+                        <select name="item_10_01">
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>02.09</td>
+                    <td>Retrovisores</td>
+                    <td>
+                        <select name="item_02_09">
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>04.09</td>
+                    <td>Luz de gálibo</td>
+                    <td>
+                        <select name="item_04_09">
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>06.15</td>
+                    <td>Tubos rígidos</td>
+                    <td>
+                        <select name="item_06_15">
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>10.02</td>
+                    <td>Trans.mer.perecedar.</td>
+                    <td>
+                        <select name="item_10_02">
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>02.10</td>
+                    <td>Señales en vehículos</td>
+                    <td>
+                        <select name="item_02_10">
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>04.10</td>
+                    <td>Catadióptricos</td>
+                    <td>
+                        <select name="item_04_10">
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>06.16</td>
+                    <td>Tubos flexibles</td>
+                    <td>
+                        <select name="item_06_16">
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>10.03</td>
+                    <td>Trans.escolar y men.</td>
+                    <td>
+                        <select name="item_10_03">
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>02.11</td>
+                    <td>Sopor.ext.rueda rep.</td>
+                    <td>
+                        <select name="item_02_11">
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>04.11</td>
+                    <td>Alumbrado interior</td>
+                    <td>
+                        <select name="item_04_11">
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>06.17</td>
+                    <td>Forros</td>
+                    <td>
+                        <select name="item_06_17"> 
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>10.04</td>
+                    <td>Tacógrafo</td>
+                    <td>
+                        <select name="item_10_04">
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>02.12</td>
+                    <td>Vidrios de seguridad</td>
+                    <td>
+                        <select name="item_02_12">  
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>04.12</td>
+                    <td>Avisador acústico</td>
+                    <td>
+                        <select name="item_04_12">
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>06.18</td>
+                    <td>Tambores y discos</td>
+                    <td>
+                        <select name="item_06_18">
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>10.05</td>
+                    <td>Limitador velocidad</td>
+                    <td>
+                        <select name="item_10_05">
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>02.13</td>
+                    <td>Ele.exc.veh.M2 y M3</td>
+                    <td>
+                        <select name="item_02_13">
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>04.15</td>
+                    <td>Señaliz.lumin.espec.</td>
+                    <td>
+                        <select name="item_04_15">
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>06.19</td>
+                    <td>Cables,varillas,pal</td>
+                    <td>
+                        <select name="item_06_19">
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>10.06</td>
+                    <td>Reformas no autoriz</td>
+                    <td>
+                        <select name="item_10_06">
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="section">03.</td>
+                    <td class="section" colspan="2">ACONDICIONAMIENTO INTERIOR</td>
+                    <td>04.16</td>
+                    <td>Luces diurnas </td>
+                    <td>
+                        <select name="item_04_16">
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>06.20</td>
+                    <td>Cilindr.sist.frenado</td>
+                    <td>
+                        <select name="item_06_20">
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>03.01</td>
+                    <td>Asientos y anclajes</td>
+                    <td>
+                        <select name="item_03_01">
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>06.21</td>
+                    <td>Valvula sensora car</td>
+                    <td>
+                        <select name="item_06_21">
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>03.02</td>
+                    <td>Cint.seg.y anclajes</td>
+                    <td>
+                        <select name="item_03_02">
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td class="section">05.</td>
+                    <td class="section" colspan="2">EMISIONES CONTAMINANTES</td>
+                    <td>06.22</td>
+                    <td>Ajust.tension autom</td>
+                    <td>
+                        <select name="item_06_22">
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>03.03</td>
+                    <td>Disp.retencion niños</td>
+                    <td>
+                        <select name="item_03_03">
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>05.01</td>
+                    <td>Ruido</td>
+                    <td>
+                        <select name="item_05_01">
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td class="section">07.</td>
+                    <td class="section" colspan="2">DIRECCIÓN</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>03.04</td>
+                    <td>Antihielo y antivaho</td>
+                    <td>
+                        <select name="item_03_04">
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>05.02</td>
+                    <td>Veh.motor enc.chispa</td>
+                    <td>
+                        <select name="item_05_02">
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>07.01</td>
+                    <td>Desviacion de ruedas</td>
+                    <td>
+                        <select name="item_07_01">
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>03.05</td>
+                    <td>Antirrobo y alarma</td>
+                    <td>
+                        <select name="item_03_05">
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>05.03</td>
+                    <td>Veh.motor enc.compr.</td>
+                    <td>
+                        <select name="item_05_03">
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>07.02</td>
+                    <td>Volante, col.direcc</td>
+                    <td>
+                        <select name="item_07_02">
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>03.06</td>
+                    <td>Campo vision directa</td>
+                    <td>
+                        <select name="item_03_06">
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td class="section">06.</td>
+                    <td class="section" colspan="2">FRENOS</td>
+                    <td>07.03</td>
+                    <td>Caja de direccion</td>
+                    <td>
+                        <select name="item_07_03">
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>06.01</td>
+                    <td>Freno de servicio</td>
+                    <td>
+                        <select name="item_06_01">
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td>07.04</td>
+                    <td>Timoneria y rotulas</td>
+                    <td>
+                        <select name="item_07_04">
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>07.05</td>
+                    <td>Servodireccion </td>
+                    <td>
+                        <select name="item_07_05">
+                            <option value="OK">OK</option>
+                            <option value="DL">DL</option>
+                            <option value="DG">DG</option>
+                            <option value="N/A" selected>N/A</option>
+                        </select>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            <table class="tablea2">
+                <tr>
+                    <td colspan="8" class="headera2" style="text-align:center ; color: white;"><b>Equipos de medición:</b></td>
+                </tr>
+                <tr>
+                    <th style="text-align:left ; color: white;">Emisiones</th>
+                    <th style="text-align:left ; color: white;">Frenado</th>
+                    <th style="text-align:left ; color: white;">Alineación</th>
+                    <th style="text-align:left ; color: white;">Vel. Act. Lim. Vel</th>
+                    <th style="text-align:left ; color: white;">Ruidos</th>
+                    <th style="text-align:left ; color: white;">Dinamómetro</th>
+                    <th style="text-align:left ; color: white;">Báscula</th>
+                    <th style="text-align:left ; color: white;">Otros</th>
+                </tr>
+                <tr>
+                    <td><input type="text" name="emisiones" value=""></td>
+                    <td><input type="text" name="frenado" value=""></td>
+                    <td><input type="text" name="alineacion" value=""></td>
+                    <td><input type="text" name="velocidad" value=""></td>
+                    <td><input type="text" name="ruidos" value=""></td>
+                    <td><input type="text" name="dinamometro" value=""></td>
+                    <td><input type="text" name="bascula" value=""></td>
+                    <td><input type="text" name="otros" value=""></td>
+                </tr>
+            </table>
+        <!-- Section C - Mediciones -->
+        <table class="c">
+            <tr>
+              <th class="c"style="text-align:center ; color: white;">C</th>
+              <th class="c" colspan="8"  style="text-align:center ; color: white;">Mediciones efectuadas durante la inspección</th>
+            </tr>
+            <tr>
+              <td class="column-header-c c" rowspan="1">Emisiones</td>
+              <td class="c" colspan="7">
+                Opacidad: 
+                <input class="c" type="text" value="--"> 
+                <span class="unit-c">m<sup>-1</sup></span>
+                CO Ralentí: 
+                <input class="c" type="text" value="--"> 
+                <span class="unit-c">%</span>
+                CO Ralentí Acelerado: 
+                <input class="c" type="text" value="--"> 
+                <span class="unit-c">%</span>
+                λ
+                <input class="c" type="text" value="--">
+                Alineación: 
+                <input class="c" type="text" value="--"> /
+                <input class="c" type="text" value="--"> /
+                <input class="c" type="text" value="--"> /
+                <input class="c" type="text" value="--">
+                <span class="unit-c">m/km</span>
+                Lím. Velocidad:
+                <input class="c" type="text" value="--">
+                <span class="unit-c">km/h</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="column-header-c c" rowspan="4">Frenado</td>
+              <td class="c">Freno de servicio</td>
+              <td class="c">F<sub>d</sub>
+                <input class="c" type="text" value="--"> /
+                <input class="c" type="text" value="--"> /
+                <input class="c" type="text" value="--"> /
+                <input class="c" type="text" value="--">
+                <span class="unit-c">kN</span>
+              </td>
+              <td class="c">F<sub>i</sub>
+                <input class="c" type="text" value="--"> /
+                <input class="c" type="text" value="--"> /
+                <input class="c" type="text" value="--"> /
+                <input class="c" type="text" value="--">
+                <span class="unit-c">kN</span>
+              </td>
+              <td class="c" colspan="2">
+                Ruidos: 
+                <input class="c" type="text" value="--"> 
+                <span class="unit-c">dB</span>
+                &nbsp;&nbsp;&nbsp;
+                <input class="c" type="text" value="--"> /
+                <input class="c" type="text" value="--">
+                <span class="unit-c">rpm</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="c">Freno de socorro</td>
+              <td class="c">F<sub>d</sub>
+                <input class="c" type="text" value="--"> /
+                <input class="c" type="text" value="--"> /
+                <input class="c" type="text" value="--"> /
+                <input class="c" type="text" value="--">
+                <span class="unit-c">kN</span>
+              </td>
+              <td class="c">F<sub>i</sub>
+                <input class="c" type="text" value="--"> /
+                <input class="c" type="text" value="--"> /
+                <input class="c" type="text" value="--"> /
+                <input class="c" type="text" value="--">
+                <span class="unit-c">kN</span>
+              </td>
+              <td class="c" colspan="2">
+                Báscula
+                <input class="c" type="text" value="--"> /
+                <input class="c" type="text" value="--"> /
+                <input class="c" type="text" value="--"> /
+                <input class="c" type="text" value="--">
+                <span class="unit-c">kg</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="c">Freno de estacionamiento</td>
+              <td class="c">F<sub>d</sub>
+                <input class="c" type="text" value="--"> /
+                <input class="c" type="text" value="--"> /
+                <input class="c" type="text" value="--"> /
+                <input class="c" type="text" value="--">
+                <span class="unit-c">kN</span>
+              </td>
+              <td class="c">F<sub>i</sub>
+                <input class="c" type="text" value="--"> /
+                <input class="c" type="text" value="--"> /
+                <input class="c" type="text" value="--"> /
+                <input class="c" type="text" value="--">
+                <span class="unit-c">kN</span>
+              </td>
+              <td class="c" colspan="2">
+                Dinamómetro
+                <input class="c" type="text" value="--"> (--) /
+                <input class="c" type="text" value="--"> (--) /
+                <input class="c" type="text" value="--"> (--)
+                <span class="unit-c">N</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="c">Deceleración</td>
+              <td class="c" colspan="4">
+                <input class="c" type="text" value="--">
+                <span class="unit-c">m/s<sup>2</sup></span>
+              </td>
+            </tr>
+          </table>
+        <!-- Section D - Relación de defectos -->
+        <div class="section">
+             <form id="defectosForm">
+                <table class="sectionD-tabla">
+                    <tr>
+                        <td style="background-color: #0056b3; width: 40px; font-weight: bold; text-align: center; border-right: 1px solid #000;">D</td>
+                        <td style="background-color: #0056b3; font-weight: bold; text-align: center; border-left: none;" colspan="2"><sup>(6)</sup>Relación de defectos encontrados en la inspección</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 15%; border-right: 1px solid #000; border-left: 1px solid #000; color: #000;"><sup>(6)</sup>Unidad</td>
+                        <td style="width: 65%; border-right: 1px solid #000; border-left: 1px solid #000; color: #000;"><sup>(6)</sup>Descripción del defecto</td>
+                        <td style="width: 20%; border-right: 1px solid #000; color: #000;"><sup>(6)</sup>Calificación</td>
+                    </tr>
+                    <tr>
+                        <td style="height: 200px; border-right: 1px solid #000; border-left: 1px solid #000;">
+                            <input type="text" id="unidad" name="unidad">
+                        </td>
+                        <td style="height: 200px; border-right: 1px solid #000; border-left: 1px solid #000;">
+                            <textarea id="descripcion" name="descripcion"></textarea>
+                        </td>
+                        <td style="height: 200px; border-right: 1px solid #000;">
+                            <input type="text" id="calificacion" name="calificacion">
+                        </td>
+                    </tr>
+                </table>
+        </div>
+        
+        <!-- Section E - Resultado -->
+        <table class="sectione inspection-table">
+            <tr>
+                <td class="header-cell" width="50%" style="text-align:center ; color: white;">E  <span class="obs-number">(7)</span>Resultado de la inspección</td>
+                <td class="result-cell" width="50%" style="background-color: #0056b3;">
+                    <span class="obs-number" style="color: white;">(7)</span>
+                    <select id="inspection-result" style="width: 125px;">
+                        <option value="favorable" selected>FAVORABLE</option>
+                        <option value="desfavorable">DESFAVORABLE</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td height="160" valign="top">
+                    <span class="obs-number">(10)</span>Observaciones:<br>
+                    <textarea id="observaciones" style="width: 95%; height: 130px; margin-top: 5px; resize: none; font-family: Arial, sans-serif; font-size: 14px; padding: 5px;"></textarea>
+                </td>
+                <td>
+                    <div style="display: flex; flex-direction: column; height: 100%;">
+                        <div style="text-align: left; margin-bottom: 5px;">
+                            <span class="obs-number">(9)</span> Vº Bº Estación ITV
+                        </div>
+                        <div class="qr-section">
+                            <div>F03</div>
+                            <div><img src="Imagenes/qr.png"></div>
+                            <div>
+                            <img src="Imagenes/logo_grupo_itevelesa.png">
+                            </div>
+                        </div>
+                        <div class="signature-info">
+                            Firmado por: Grupo Itevelesa<br>
+                            S.L.O.<br>
+                            <div class="date-container">
+                                <label class="date-label" name="Fecha">Fecha:</label>
+                                <div id="date-display" class="date-field"></div>
+                                <input type="hidden" id="fecha" name="fecha">
+                            </div>
+                        
+                            <script>
+                                document.addEventListener('DOMContentLoaded', function() {
+                                    function actualizarFecha() {
+                                        const hoy = new Date();
+                                        
+                                        // Formato para mostrar en español
+                                        const opciones = { 
+                                            weekday: 'long',
+                                            year: 'numeric', 
+                                            month: 'long', 
+                                            day: 'numeric'
+                                        };
+                                        const fechaFormateada = hoy.toLocaleDateString('es-ES', opciones);
+                                        
+                                        // Mostrar en el elemento visual con primera letra en mayúscula
+                                        document.getElementById('date-display').textContent = 
+                                            fechaFormateada.charAt(0).toUpperCase() + fechaFormateada.slice(1);
+                                        
+                                        // Guardar en formato adecuado para el campo oculto (YYYY-MM-DD)
+                                        const yyyy = hoy.getFullYear();
+                                        const mm = String(hoy.getMonth() + 1).padStart(2, '0');
+                                        const dd = String(hoy.getDate()).padStart(2, '0');
+                                        
+                                        // Actualizar campo oculto
+                                        document.getElementById('fecha').value = `${yyyy}-${mm}-${dd}`;
+                                    }
+                                    
+                                    // Actualizar la fecha al cargar
+                                    actualizarFecha();
+                                });
+                            </script>
+                        </div>
+                        <div class="signature-container">
+                            <div class="signature-header"></div>
+                            <div class="instructions">Firma utilizando el ratón o pantalla táctil</div>
+                            <div id="signature-pad">
+                                <canvas id="signature-canvas"></canvas>
+                            </div>
+                            <div class="button-container">
+                                <button id="clear-button">Borrar firma</button>
+                                <button id="save-button">Guardar firma</button>
+                            </div>
+                        </div>
+                    
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function() {
+                                const canvas = document.getElementById('signature-canvas');
+                                const clearButton = document.getElementById('clear-button');
+                                const saveButton = document.getElementById('save-button');
+                                const ctx = canvas.getContext('2d');
+                                let isDrawing = false;
+                                let lastX = 0;
+                                let lastY = 0;
+                                
+                                // Ajustar el tamaño del canvas para que coincida con su contenedor
+                                function resizeCanvas() {
+                                    const container = canvas.parentElement;
+                                    canvas.width = container.clientWidth;
+                                    canvas.height = container.clientHeight;
+                                    ctx.lineJoin = 'round';
+                                    ctx.lineCap = 'round';
+                                    ctx.lineWidth = 2;
+                                    ctx.strokeStyle = '#000';
+                                }
+                                
+                                // Llamar a resizeCanvas cuando la página cargue
+                                resizeCanvas();
+                                
+                                // Volver a ajustar el tamaño del canvas si cambia el tamaño de la ventana
+                                window.addEventListener('resize', resizeCanvas);
+                                
+                                // Funciones para dibujar
+                                function startDrawing(e) {
+                                    isDrawing = true;
+                                    [lastX, lastY] = getCoordinates(e);
+                                }
+                                
+                                function stopDrawing() {
+                                    isDrawing = false;
+                                }
+                                
+                                function draw(e) {
+                                    if (!isDrawing) return;
+                                    e.preventDefault();
+                                    
+                                    const [currentX, currentY] = getCoordinates(e);
+                                    
+                                    ctx.beginPath();
+                                    ctx.moveTo(lastX, lastY);
+                                    ctx.lineTo(currentX, currentY);
+                                    ctx.stroke();
+                                    
+                                    [lastX, lastY] = [currentX, currentY];
+                                }
+                                
+                                // Obtener coordenadas según el tipo de evento (mouse o touch)
+                                function getCoordinates(e) {
+                                    const rect = canvas.getBoundingClientRect();
+                                    if (e.type.includes('touch')) {
+                                        return [
+                                            e.touches[0].clientX - rect.left,
+                                            e.touches[0].clientY - rect.top
+                                        ];
+                                    } else {
+                                        return [
+                                            e.clientX - rect.left,
+                                            e.clientY - rect.top
+                                        ];
+                                    }
+                                }
+                                
+                                // Borrar la firma
+                                function clearSignature() {
+                                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                                }
+                                
+                                // Guardar la firma como imagen
+                                function saveSignature() {
+                                    const dataURL = canvas.toDataURL('image/png');
+                                    
+                                    // Aquí puedes hacer lo que necesites con la imagen (guardarla, enviarla al servidor, etc.)
+                                    console.log('Firma guardada:', dataURL);
+                                    
+                                    // Ejemplo: mostrar la imagen en una nueva ventana
+                                    // window.open(dataURL, '_blank');
+                                    
+                                    // También puedes crear un elemento para almacenar la firma como valor
+                                    const hiddenInput = document.createElement('input');
+                                    hiddenInput.type = 'hidden';
+                                    hiddenInput.name = 'signature';
+                                    hiddenInput.value = dataURL;
+                                    canvas.parentElement.appendChild(hiddenInput);
+                                    
+                                    alert('Firma guardada correctamente');
+                                }
+                                
+                                // Event listeners para mouse
+                                canvas.addEventListener('mousedown', startDrawing);
+                                canvas.addEventListener('mousemove', draw);
+                                canvas.addEventListener('mouseup', stopDrawing);
+                                canvas.addEventListener('mouseout', stopDrawing);
+                                
+                                // Event listeners para touch (dispositivos móviles y tablets)
+                                canvas.addEventListener('touchstart', startDrawing);
+                                canvas.addEventListener('touchmove', draw);
+                                canvas.addEventListener('touchend', stopDrawing);
+                                
+                                // Event listeners para botones
+                                clearButton.addEventListener('click', clearSignature);
+                                saveButton.addEventListener('click', saveSignature);
+                            });
+                        </script>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <div class="vehicle-container">
+                        <!-- Área de la imagen -->
+                        <div class="vehicle-image">
+                          <img id="vehicle-photo" src="/api/placeholder/320/200" alt="Foto del vehículo">
+                        </div>
+                        <!-- Botones alineados justo debajo de la imagen -->
+                        <div class="image-buttons">
+                          <button id="upload-first-btn" type="button" class="boton" style="background-color: #f5a000;">Subir foto</button>
+                          <button id="change-btn"      type="button" class="boton" style="background-color: #f5a000;">Cambiar foto</button>
+                          <button id="delete-btn"      type="button" class="boton" style="background-color: #f5a000;">Eliminar foto</button>
+                        </div>
+                        <!-- Input de archivo oculto -->
+                        <input type="file" id="vehicle-photo-upload" accept="image/*" style="display: none;">
+                      </div>
+                    
+                      <script>
+                        document.addEventListener('DOMContentLoaded', () => {
+                          const uploadBtn = document.getElementById('upload-first-btn');
+                          const changeBtn = document.getElementById('change-btn');
+                          const deleteBtn = document.getElementById('delete-btn');
+                          const vehiclePhoto = document.getElementById('vehicle-photo');
+                          const fileInput = document.getElementById('vehicle-photo-upload');
+                          const defaultSrc = '/api/placeholder/320/200';
+                    
+                          // Función para disparar el diálogo de selección de archivo
+                          const openFileDialog = () => fileInput.click();
+                    
+                          uploadBtn.addEventListener('click', openFileDialog);
+                          changeBtn.addEventListener('click', openFileDialog);
+                    
+                          fileInput.addEventListener('change', () => {
+                            if (fileInput.files && fileInput.files[0]) {
+                              const reader = new FileReader();
+                              reader.onload = e => vehiclePhoto.src = e.target.result;
+                              reader.readAsDataURL(fileInput.files[0]);
+                            }
+                          });
+                    
+                          deleteBtn.addEventListener('click', () => {
+                            vehiclePhoto.src = defaultSrc;
+                            fileInput.value = '';
+                          });
+                        });
+                      </script>                                  
+                        <label name="MITV">ITV</label>
+                        <input type="text" id="NITV" name="NITV">
+                        <div class="datetime-container">
+                            <label class="datetime-label" name="Fecha">Fecha y Hora:</label>
+                            <div id="datetime-display" class="datetime-field"></div>
+                            <input type="hidden" id="fecha" name="fecha">
+                            <input type="hidden" id="hora" name="hora">
+                            <input type="hidden" id="fecha_hora_completa" name="fecha_hora_completa">
+                        </div>
+                    
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function() {
+                                function actualizarFechaHora() {
+                                    const ahora = new Date();
+                                    
+                                    // Formato para mostrar
+                                    const opciones = { 
+                                        weekday: 'long',
+                                        year: 'numeric', 
+                                        month: 'long', 
+                                        day: 'numeric',
+                                        hour: '2-digit',
+                                        minute: '2-digit',
+                                        second: '2-digit',
+                                        hour12: false
+                                    };
+                                    const fechaHoraFormateada = ahora.toLocaleDateString('es-ES', opciones);
+                                    
+                                    // Mostrar en el elemento visual
+                                    document.getElementById('datetime-display').textContent = fechaHoraFormateada;
+                                    
+                                    // Guardar en formato adecuado para los campos ocultos
+                                    const yyyy = ahora.getFullYear();
+                                    const mm = String(ahora.getMonth() + 1).padStart(2, '0');
+                                    const dd = String(ahora.getDate()).padStart(2, '0');
+                                    const hh = String(ahora.getHours()).padStart(2, '0');
+                                    const min = String(ahora.getMinutes()).padStart(2, '0');
+                                    const ss = String(ahora.getSeconds()).padStart(2, '0');
+                                    
+                                    // Actualizar campos ocultos
+                                    document.getElementById('fecha').value = `${yyyy}-${mm}-${dd}`;
+                                    document.getElementById('hora').value = `${hh}:${min}`;
+                                    document.getElementById('fecha_hora_completa').value = `${yyyy}-${mm}-${dd}T${hh}:${min}:${ss}`;
+                                }
+                                
+                                // Actualizar la fecha y hora al cargar
+                                actualizarFechaHora();
+                                
+                                // Actualizar cada segundo (opcional)
+                                setInterval(actualizarFechaHora, 1000);
+                            });
+                        </script>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div class="small-text" style="margin-top: 10px;">
+                        Los puntos indicados con A han sido inspeccionados por el inspector<br>
+                        Los puntos indicados con B han sido inspeccionados por el inspector<br>
+                        Los puntos indicados con C han sido inspeccionados por el inspector<br>
+                        Los puntos indicados con N/A no aplican al tipo de vehículo inspeccionado o al tipo de inspección
+                    </div>
+                    <div class="repair-info" style="margin-top: 10px;">
+                        Información sobre reparaciones efectuadas tras una inspección<br>
+                        desfavorable o negativa:
+                        <div style="margin-left: 45%; margin-top: -32px;">
+                            Identificación taller (NIF):<input type="text" class="NIF" value="" style="width: 20%;"><br>
+                            Razón social (localidad):<input type="text" class="Razón social" value="" style="width: 20%;"><br>
+                        </div>
+                        <div style="margin-left: 45%; margin-top: 10px;">
+                            Autoreparación: <input type="checkbox" id="self-repair" name="self-repair" style="vertical-align: middle;">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>  
+        <button type="button" class="boton imprimir" onclick="imprimirFormulario()">
+            Imprimir Formulario
+          </button>
+          <button type="button" class="boton enviar" onclick="enviarPorEmailJS()">
+            Enviar por Email
+          </button>
+          <input type="submit" value="Enviar formulario" name="submit_btn" class="boton enviar">
+          <script>
+            function enviarPorEmailJS() {
+              alert('Por favor, revisa todos los datos antes de enviar por email.');
+          
+              // 1) Pedir correo destino
+              const destinatario = prompt('Introduce el correo de destino:');
+              if (!destinatario || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(destinatario)) {
+                alert('Correo inválido.');
+                return;
+              }
+          
+              // 2) Recoger el texto/HTML que quieras enviar
+              //    Aquí usamos innerText de todo el contenedor:
+              const contenido = document
+                .getElementById('contenidoCompleto')
+                .innerText
+                .trim();
+          
+              // 3) Parámetros que usará el template
+              const templateParams = {
+                to_email: destinatario,
+                contenido: contenido
+              };
+          
+              // 4) Envía: sustituye 'TU_TEMPLATE_ID' por el ID que obtengas
+              emailjs.send('service_8koqbso', 'template_892r23i', templateParams)
+                .then(response => {
+                  alert('Correo enviado correctamente.');
+                }, error => {
+                  console.error('Error EmailJS:', error);
+                  alert('Error al enviar correo.');
+                });
+            }
+            function imprimirFormulario() {
+            const confirmacion = confirm('¿Ha revisado todos los datos del formulario antes de imprimir?');
+            if (confirmacion) {
+                window.print();
+            }
+            }
+          </script>
+        <!-- Footer -->
+    <p class="footer_form">Inspección regulada por el Real Decreto 920/2017, de 23 de octubre.</p>
+</body>
+</form>
+
+</html>

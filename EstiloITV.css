@@ -1,0 +1,271 @@
+
+/*
+#ITVimg {
+    position: top left;
+    padding: 50px;
+    width: 150px;
+    height: 75px;
+    margin: auto;
+}
+
+.heading {
+    background-image: url(ITVbg.jpg);
+    background-size: cover;
+}
+
+.head {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav {
+    width:100%;
+    display: flex;
+    padding: 5px 10px;
+    justify-content: space-around;
+
+}
+
+.ulnav {
+    float:left;
+    padding: 10px;
+    list-style: none;
+    overflow: hidden;
+    font-size: x-large;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0,3s;
+}
+
+.ulnav a:hover {
+    background-color: #f5a000;
+    border-radius: 5px;
+    border-style: groove;
+}
+
+.catchphrases {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    justify-content: space-around;
+    color: rgb(245, 160, 0)
+    
+}
+
+#btnMatricula {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+/* Encabezado */
+.heading {
+    background-image: url("ITVbg.jpg"); /* Imagen de fondo de cabecera */
+    background-size: cover;
+    background-position: center;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    text-align: center;
+}
+
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#ITVimg {
+    width: 100px;
+    height: auto; /* Ajusta la proporción automáticamente */
+    margin: 10px;
+}
+
+.catchphrases {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    margin: 10px 0;
+}
+
+/* Menú de navegación */
+.nav {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.ulnav {
+    list-style: none;
+    display: flex;
+    margin: 50px;
+    padding: 10px;
+}
+
+.ulnav li {
+    margin: 0 10px;
+}
+
+.ulnav a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    background-color: rgba(255, 255, 255, 0.281);
+}
+
+.ulnav a:hover {
+    background-color: rgba(255, 255, 255, 0.596);
+}
+
+
+main {
+    padding: 20px;
+    background-color: #014d94d0;
+}
+
+.pedir_cita {
+    background-color: #014d94;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 20px;
+    text-align: center;
+}
+
+.pedir_cita h1 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.info_pedir_cita {
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.matricula_pedir_cita {
+    margin: 15px 0;
+}
+
+.matricula_pedir_cita input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.boton_pedircita {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.boton_pedircita:hover {
+    background-color: #e08e00; /* Naranja más oscuro */
+}
+
+/* Acciones rápidas */
+.acciones {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 20px;
+    text-align: center;
+}
+
+.acciones h2 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.acciones ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.acciones li {
+    margin: 10px 0;
+}
+
+.acciones a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.acciones a:hover {
+    color: #e08e00;
+}
+
+/* Pie de página */
+footer {
+    background-color: var(--primary-color);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .head {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+    }
+
+    .pedir_cita,
+    .acciones {
+        max-width: 90%;
+    }
+
+    .catchphrases {
+        font-size: 1rem;
+    }
+}

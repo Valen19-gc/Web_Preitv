@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Reserva - ITV</title>
+    <link rel="stylesheet" href="FormularioReserva.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Modelos por marca
+            const modelosPorMarca = {
+                volkswagen: ['Golf', 'Passat', 'Tiguan'],
+                toyota: ['Corolla', 'Yaris', 'RAV4'],
+                bmw: ['Serie 3', 'Serie 5', 'X5'],
+                ford: ['Focus', 'Fiesta', 'Mustang'],
+                skoda: ['Octavia', 'Superb', 'Kodiaq'],
+                audi: ['A3', 'A4', 'Q5'],
+                seat: ['Ibiza', 'León', 'Ateca']
+            };
+
+            const marcaSelect = document.getElementById('marca');
+            const modeloSelect = document.getElementById('modelo');
+
+            marcaSelect.addEventListener('change', () => {
+                const marcaSeleccionada = marcaSelect.value;
+                modeloSelect.innerHTML = '<option value="" disabled selected>Selecciona un modelo:</option>';
+
+                if (modelosPorMarca[marcaSeleccionada]) {
+                    modelosPorMarca[marcaSeleccionada].forEach(modelo => {
+                        const option = document.createElement('option');
+                        option.value = modelo.toLowerCase();
+                        option.textContent = modelo;
+                        modeloSelect.appendChild(option);
+                    });
+                }
+            });
+
+            // Restricciones de fecha
+            const fechaInput = document.getElementById('fecha');
+            const fechaMin = '2025-01-27';
+            const fechaMax = '2025-02-14';
+
+            fechaInput.min = fechaMin;
+            fechaInput.max = fechaMax;
+
+            // Restricciones de hora
+            const horaInput = document.getElementById('hora');
+            fechaInput.addEventListener('change', () => {
+                const fechaSeleccionada = new Date(fechaInput.value);
+                const diaSemana = fechaSeleccionada.getUTCDay(); // 0 (Domingo) a 6 (Sábado)
+
+                horaInput.value = '';
+
+                if (diaSemana === 3) { // Miércoles
+                    horaInput.min = '10:05';
+                } else if (diaSemana === 5) { // Viernes
+                    horaInput.min = '09:10';
+                } else if (diaSemana >= 1 && diaSemana <= 5) { // Lunes a Viernes
+                    horaInput.min = '08:00';
+                } else { // Fines de semana
+                    horaInput.min = '';
+                    horaInput.value = '';
+                    alert('Las reservas solo están disponibles de lunes a viernes.');
+                }
+                horaInput.max = '14:00';
+            });
+        });
+    </script>
+    <style>
+        .rss{
+            background-color: #f5a000;
+            color: black;
+            border: none;
+        }
+        nav .nav-table li button a:hover {
+        color: #000000
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-table">
+                <li><a href="index.html"><img src="Imagenes/PreITVlogo.jpg" id="ITVimg"></a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Form_reto.html">Cita Previa</a></li>
+                <li class="login-empleados"><button><a href="login.html">Admin</a></button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="formulario-container">
+            <form action="form.php" method="request" class="formulario">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="apellidos">Apellidos:</label>
+                    <input type="text" id="apellidos" name="apellidos" required>
+                </div>
+                <div class="form-group">
+                    <label for="matricula">Matrícula del Vehículo:</label>
+                    <input type="text" id="matricula" name="matricula" placeholder="0000XXX" pattern="([0-9]{4} [A-Z]{3})|([A-Z] [0-9]{4} [A-Z]{3})" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="servicio">Tipo de Servicio:</label>
+                    <select id="servicio" name="servicio" required>
+                        <option value="preitv" selected>Pre ITV</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="marca">Marca del coche:</label>
+                    <select id="marca" name="marca" required>
+                        <option value="" disabled selected>Selecciona una marca:</option>
+                        <option value="volkswagen">Volkswagen</option>
+                        <option value="toyota">Toyota</option>
+                        <option value="bmw">BMW</option>
+                        <option value="ford">Ford</option>
+                        <option value="skoda">Skoda</option>
+                        <option value="audi">Audi</option>
+                        <option value="seat">Seat</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="modelo">Modelo del coche:</label>
+                    <select id="modelo" name="modelo" required>
+                        <option value="" disabled selected>Selecciona un modelo:</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="fecha">Fecha de la Cita:</label>
+                    <input type="date" id="fecha" name="fecha" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="hora">Hora de la Cita:</label>
+                    <input type="time" id="hora" name="hora" required>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn-submit">Reservar Cita</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <button id="dark-mode-toggle">
+                    <i class="fas fa-moon"></i>Activar Modo Oscuro
+                </button>
+                <script src="darkmode.js"></script>
+            </div>
+            <div class="footer-center">
+                <p class="amarap"><a href="https://amaracantabria.org/donaciones/"><img class="amara" src="Imagenes/logo-amara.png" alt="Logo Amara"></a>Amara Cantabria <br> Entidad colaboradora <br>Dona y apoya ahora!!</p>
+                <p>&copy; 2024 Equipo 3 Todos los derechos reservados.</p>
+            </div>
+            <div class="footer-right">
+                <nav>
+                    <a href="#">Términos y condiciones</a> |
+                    <a href="#">Política de privacidad</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

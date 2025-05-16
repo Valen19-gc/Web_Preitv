@@ -1,0 +1,382 @@
+/* FormularioReserva.css */
+
+:root {
+    --primary-color: #0056b3;
+    --secondary-color: #f5a000;
+    --complementary-color: #a85032; /* Example: Brick-like color */
+    --text-color: #333;
+    --background-color: #f9f9f9;
+    --form-bg: white;
+    --border-radius: 0.5em; /* Usando unidades relativas para escalabilidad */
+    --box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.1); /* Usando unidades relativas */
+    --font-family: 'Arial', sans-serif;
+    --spacing-small: 0.5em; /* Espaciado pequeño */
+    --spacing-medium: 1em; /* Espaciado mediano */
+    --spacing-large: 1.5em; /* Espaciado grande */
+    --font-size-base: 1rem; /* Tamaño de fuente base */
+    --font-size-large: 1.25rem; /* Tamaño de fuente grande */
+
+    /* Colores para Modo Oscuro */
+    --dark-background-color: #121212;
+    --dark-text-color: #e0e0e0;
+    --dark-form-bg: #333333;
+    --dark-border-color: #444444;
+    --dark-box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.3); /* Usando unidades relativas */
+    --dark-primary-color: #333333;
+    --dark-secondary-color: #f5a000;
+    --dark-link-color: #f5a000;
+    --dark-button-bg: #f5a000;
+    --dark-button-hover-bg: #e0e0e0;
+    --dark-edificio-bg: #1a1a1a;
+    --dark-edificio-border: #333333;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    font-size: var(--font-size-base); /* Usando la variable de tamaño de fuente */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--primary-color);
+    padding: var(--spacing-medium) 0; /* Usando variable de espaciado */
+    display: flex;
+    justify-content: center; /* Center the navigation items */
+    align-items: center; /* Vertically align items */
+    box-shadow: var(--box-shadow);
+    width: 100%;
+    font-family: var(--font-family);
+    /* Corrección para ajustar al margen */
+    margin-left: 0;
+    margin-right: 0;
+}
+
+nav .nav-table {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    justify-content: center; /* Center the navigation items */
+    align-items: center;
+    margin: 0;
+    padding: 0 var(--spacing-medium);
+}
+
+nav .nav-table li {
+    margin: var(--spacing-small) var(--spacing-large);
+}
+
+nav .nav-table li:first-child {
+    margin-right: auto; /* Push logo to the left */
+}
+
+nav .nav-table li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: var(--font-size-base); /* Usando la variable de tamaño de fuente */
+    transition: color 0.3s ease;
+    padding: var(--spacing-small) var(--spacing-medium); /* Add padding to links for better touch targets */
+    border-radius: var(--border-radius); /* Add border-radius to links */
+}
+
+nav .nav-table li a:hover {
+    color: var(--secondary-color);
+    background-color: rgba(255, 255, 255, 0.1); /* Add a subtle background on hover */
+}
+
+nav .nav-table li button {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border: none;
+    padding: var(--spacing-small) var(--spacing-medium);
+    border-radius: var(--border-radius);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+nav .nav-table li button a {
+    color: inherit;
+    font-size: var(--font-size-base);
+    text-decoration: none;
+}
+
+nav .nav-table li button:hover {
+    background-color: #e08e00;
+}
+
+#ITVimg {
+    width: 6.25em; /* 100px / 16px = 6.25em - Unidad relativa */
+    height: auto;
+    margin: var(--spacing-small); /* Usando variable de espaciado */
+}
+
+/* Formulario Container */
+.formulario-container {
+    max-width: 37.5em; /* 600px / 16px = 37.5em - Unidad relativa */
+    background-color: var(--form-bg);
+    margin: var(--spacing-medium) auto; /* Usando variable de espaciado */
+    padding: var(--spacing-medium); /* Usando variable de espaciado */
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+/* Formulario */
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-small); /* Usando variable de espaciado */
+    align-items: stretch;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3125em; /* 5px / 16px = 0.3125em - Unidad relativa */
+    padding: 0 var(--spacing-small); /* Usando variable de espaciado */
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    padding: var(--spacing-small); /* Usando variable de espaciado */
+    font-size: 1rem; /* Mantenemos rem aquí para consistencia con la base */
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.btn-submit {
+    background-color: var(--secondary-color);
+    color: white;
+    font-size: var(--font-size-base); /* Usando la variable de tamaño de fuente */
+    font-weight: bold;
+    padding: var(--spacing-small); /* Usando variable de espaciado */
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-end;
+}
+
+.btn-submit:hover {
+    background-color: #e08e00;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: var(--spacing-medium); /* Usando variable de espaciado */
+    margin-top: var(--spacing-large); /* Usando variable de espaciado */
+    /* Corrección para ajustar al margen */
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer nav a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    margin: 0 var(--spacing-small); /* Usando variable de espaciado */
+}
+
+footer nav a:hover {
+    text-decoration: underline;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 70em;
+    margin: 0 auto;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+    padding: var(--spacing-small);
+    text-align: center;
+    flex: 1;
+    display: flex; /* Enable flex for inner elements */
+    align-items: center; /* Vertically align inner elements */
+    justify-content: center; /* Center inner elements horizontally */
+    flex-direction: column; /* Stack elements vertically by default */
+}
+
+.footer-left {
+    justify-content: flex-start; /* Align button to the start */
+    flex-direction: row; /* Align button and potentially other elements horizontally */
+}
+
+.footer-center {
+    order: 2;
+}
+
+.footer-left {
+    order: 1;
+}
+
+.footer-right {
+    text-align: right;
+    order: 3;
+    justify-content: flex-end; /* Align navigation to the end */
+}
+
+.amarap {
+    text-align: center; /* Center the Amara text */
+    font-size: 0.8rem; /* Slightly reduce font size */
+    margin: var(--spacing-small) 0; /* Add some vertical margin */
+}
+
+.amara {
+    width: 6em; /* Reduced image size */
+    height: auto;
+    margin-right: var(--spacing-small); /* Add some right margin for spacing */
+    vertical-align: middle; /* Align image with text */
+}
+
+/* Boton modos */
+#dark-mode-toggle {
+    border-radius: 50%;
+    padding: var(--spacing-small);
+    margin-right: var(--spacing-medium);
+    font-size: 0.8rem; /* Slightly reduce font size */
+}
+
+/* Responsive Design */
+@media (max-width: 48em) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        text-align: center;
+        width: 100%;
+        order: initial;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer-left {
+        flex-direction: column; /* Stack button on smaller screens */
+        align-items: center;
+    }
+
+    .footer-right {
+        align-items: center;
+    }
+
+    .amara {
+        float: none;
+        margin-bottom: var(--spacing-small);
+        margin-right: 0;
+    }
+
+    .amarap {
+        text-align: center;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav .nav-table {
+        margin-top: var(--spacing-small);
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav .nav-table li {
+        margin: var(--spacing-small) 0;
+    }
+
+    nav .nav-table li a {
+        font-size: var(--font-size-base);
+    }
+}
+
+/* Modo Oscuro */
+body.dark-mode footer {
+    background-color: var(--dark-secondary-color);
+    background-color: var(--dark-primary-color);
+    color: var(--dark-text-color);
+}
+
+body.dark-mode .amarap {
+    color: var(--dark-text-color);
+}
+
+body.dark-mode #dark-mode-toggle {
+    background-color: var(--dark-secondary-color);
+    color: var(--dark-text-color);
+    border-color: var(--dark-text-color);
+}
+
+body.dark-mode #dark-mode-toggle:hover {
+    background-color: var(--dark-secondary-color);
+    color: var(--dark-text-color);
+    border-color: var(--dark-secondary-color);
+}
+body.dark-mode {
+    background-color: var(--dark-background-color);
+    color: var(--dark-text-color);
+}
+
+body.dark-mode .formulario-container {
+    background-color: var(--dark-form-bg);
+    box-shadow: var(--dark-box-shadow);
+}
+
+body.dark-mode header {
+    background-color: var(--dark-primary-color);
+}
+
+body.dark-mode input,
+body.dark-mode select {
+    background-color: var(--dark-form-bg);
+    color: var(--dark-text-color);
+    border: 1px solid var(--dark-border-color);
+}
+
+body.dark-mode input:focus,
+body.dark-mode select:focus {
+    border-color: var(--dark-secondary-color);
+}
+
+body.dark-mode .btn-submit {
+    background-color: var(--dark-button-bg);
+    color: var(--dark-text-color);
+}
+
+body.dark-mode .btn-submit:hover {
+    background-color: var(--dark-button-hover-bg);
+    color: black;
+}
+

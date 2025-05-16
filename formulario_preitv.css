@@ -1,0 +1,814 @@
+:root {
+  --font-family: Arial, sans-serif;
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --font-size-base: 16px;
+  --spacing-small: 5px;
+  --spacing-medium: 10px;
+  --spacing-large: 20px;
+  --border-radius: 4px;
+  --secondary-color: #e08e00;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  font-size: var(--font-size-base); 
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 50%;
+  margin: 0 auto;
+  border: 1px solid #000;
+  background: rgb(255, 255, 255);
+}
+
+.header {
+  background-color:  #0056b3;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+}
+.arriba {
+  background-color: #0056b3;
+}
+.section {
+  border-bottom: 1px solid #000;
+  padding: 5px;
+  page-break-inside: avoid; /* Evita cortar secciones al imprimir */
+}
+
+.section-title, .section-titlea {
+  font-weight: bold;
+  background-color: #0056b3;
+  padding: 3px;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  color : white;
+}
+
+/* Grid System */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  margin-bottom: 5px;
+}
+
+.full-width, .full-widtha {
+  grid-column: 1 / -1;
+}
+
+/* Forms */
+.form-group, .form-groupa {
+  margin-bottom: 3px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.form-group label {
+  font-weight: bold;
+  min-width: 120px;
+  font-size: 9px; /* Reducido para mejor ajuste */
+}
+
+.form-control, 
+.form-controla,
+input[type="text"],
+input[type="date"] {
+  border: 1px solid #ccc;
+  padding: 2px;
+  width: 100%;
+  font-size: 9px;
+  background: rgb(255, 255, 255);
+  border-radius: 2px;
+}
+
+input[type="text"].required {
+  border-color: #ff4444;
+  background: #fff3f3;
+}
+
+input[type="text"].optional {
+  background: #f8f8f8;
+  color: #666;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 3px;
+}
+
+.form-column {
+  flex: 1;
+  margin-right: 5px;
+}
+
+.form-column label {
+  display: block;
+  font-size: 9px;
+  margin-bottom: 1px;
+}
+
+/* Universal Table Styles */
+table,
+.table,
+.itv-form,
+.itv-forma,
+.tablea2 {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  font-size: 9px;
+  margin-bottom: 5px;
+}
+
+th, td,
+.header-rowa td,
+.headera2 {
+  border: 1px solid #000000;
+  padding: 2px;
+  text-align: left;
+  vertical-align: top;
+  background-color: #ffffff;
+  color : rgb(0, 0, 0);
+}
+
+select {
+  width: 43px;
+  font-size: 9px;
+}
+
+th,
+.header-rowa td,
+.headera2,
+.header.b,
+.section.b {
+  background-color: #0056b3;
+  font-weight: bold;
+}
+
+/* Results */
+.inspection-result {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.favorable {
+  color: green;
+}
+
+.desfavorable {
+  color: red;
+}
+
+/* Buttons */
+.btn-upload,
+.button.b {
+  padding: 3px 5px;
+  background: #f0f0f0;
+  border: 1px solid #0056b3;
+  cursor: pointer;
+  border-radius: 2px;
+  font-size: 9px;
+}
+
+.submit-btn,
+.button.b {
+  background: #0056b3;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+  display: block;
+  margin: 5px auto;
+}
+
+.submit-btn:hover,
+.button.hover.b:hover {
+  background: #0056b3;
+}
+
+/* Utilities */
+.right-aligned {
+  text-align: right;
+}
+
+.small-text, .small-texta {
+  font-size: 8px;
+}
+
+.signature-area {
+  border: 1px solid #ccc;
+  height: 60px;
+  width: 150px;
+  margin: 5px 0;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.image-placeholder {
+  width: 120px;
+  height: 80px;
+  border: 1px dashed #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px 0;
+}
+
+.footer_form {
+  text-align: center;
+  font-size: 9px;
+}
+
+/* Tabla sección C */
+c {
+  border: 1px solid #aaa;
+  padding: 2px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.column-header-c {
+  font-weight: bold;
+  background-color: #eee;
+}
+
+.unit-c {
+  font-size: 8px;
+  color: #555;
+}
+
+input.c {
+  width: 30px;
+  text-align: center;
+  padding: 1px;
+  margin: 0 1px;
+  display: inline-block;
+}
+
+/* Sección D */
+.sectionD-tabla {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+}
+
+.sectionD-tabla th, .sectionD-tabla td {
+  border: 1px solid #000;
+  padding: 4px;
+  height: 30px;
+  color: #fff 
+}
+
+.sectionD-tabla th {
+  background-color: #f0f0f0;
+  text-align: left;
+  font-weight: normal;
+}
+
+.sectionD-tabla caption {
+  background-color: #0056b3;
+  font-weight: bold;
+  padding: 4px;
+  border: 1px solid #000;
+  border-bottom: none;
+  text-align: left;
+
+}
+
+.sectionD-formulario {
+  margin-top: 5px;
+  width: 100%;
+}
+
+.sectionD-formulario label {
+  display: block;
+  margin-bottom: 2px;
+  font-weight: bold;
+  font-size: 9px;
+}
+
+.sectionD-formulario input[type="text"] {
+  width: 100%;
+  padding: 3px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  font-size: 9px;
+}
+
+.sectionD-formulario textarea {
+  width: 100%;
+  height: 60px;
+  padding: 3px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  font-size: 9px;
+}
+
+.sectionD-formulario button {
+  padding: 3px 8px;
+  background-color: #4CAF50;
+
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 9px;
+}
+
+/* Sección E */
+.sectione {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  margin-bottom: 10px;
+  font-size: 9px;
+}
+
+.sectione td, .sectione th {
+  border: 1px solid #000;
+  padding: 3px;
+  vertical-align: top;
+}
+
+.header-cell {
+  background-color: #0056b3;
+  font-weight: bold;
+
+}
+
+.result-cell {
+  background-color: #aaa;
+  font-weight: bold;
+  width: 50%;
+}
+
+.obs-number {
+  vertical-align: top;
+  font-size: 7px;
+  position: relative;
+  top: -2px;
+}
+
+.signature-section {
+  text-align: center;
+}
+
+.qr-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.qr-code {
+  width: 60px;
+  height: 60px;
+  border: 1px solid #000;
+  margin: 3px 0;
+  background-image: url('/api/placeholder/60/60');
+}
+
+.stamp {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+  text-align: center;
+  margin: 3px auto;
+}
+
+.vehicle-image {
+  width: 100%;
+  height: 150px;
+  position: relative;
+  overflow: hidden;
+}
+
+#vehicle-photo-upload {
+  display: none;
+}
+
+.upload-btn {
+  position: absolute;
+  bottom: 3px;
+  left: 3px;
+  background: rgba(255,255,255,0.7);
+  border: none;
+  padding: 2px 5px;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 8px;
+  z-index: 10;
+}
+
+.inspection-points {
+  font-size: 9px;
+}
+
+.repair-info {
+  font-size: 9px;
+  font-weight: bold;
+}
+
+.signature-info {
+  font-size: 8px;
+  text-align: left;
+  margin-top: 3px;
+}
+
+.timestamp {
+  font-size: 8px;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  color: white;
+}
+
+.image-container {
+  position: relative;
+}
+
+.checkbox {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #000;
+  display: inline-block;
+  margin-left: 3px;
+}
+
+/* Botones */
+.boton {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin: 5px;
+  font-size: 11px;
+  transition: background-color 0.3s;
+}
+
+.boton-imprimir {
+  background-color: #30a534;
+  color: white;
+}
+
+.boton-imprimir:hover {
+  background-color: #45a049;
+}
+
+.boton-enviar {
+  background-color: #008CBA;
+  color: white;
+}
+
+.boton-enviar:hover {
+  background-color: #007399;
+}
+
+/* Media Query específica para impresión */
+@media print {
+  @page {
+    size: A4;
+    margin: 10mm; /* Margen para impresión */
+  }
+  
+  body {
+    width: 190mm; /* A4 width - margins */
+    min-height: 277mm; /* A4 height - margins */
+    padding: 0;
+    margin: 0;
+    font-size: 9px;
+  }
+  
+  .container {
+    max-width: 100%;
+    margin: 0;
+    border: 1px solid #000;
+  }
+  
+  .section {
+    page-break-inside: avoid; /* Evita cortar secciones en diferentes páginas */
+  }
+  
+  /* Ocultar botones en la impresión */
+  .boton, .btn-upload, .submit-btn, .button.b, .upload-btn {
+    display: none;
+  }
+  
+  /* Ajustes específicos para tablas en impresión */
+  table, .table, .itv-form, .itv-forma, .tablea2, .sectionD-tabla, .sectione {
+    page-break-inside: avoid;
+    font-size: 8px;
+  }
+  
+  /* Mantener colores en la impresión */
+  .favorable, .desfavorable {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  
+  /* Asegurar que los fondos se impriman */
+  th, .header-rowa td, .headera2, .header.b, .section.b, .header-cell, .result-cell {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+    /* Contenedor principal para centrar y definir ancho */
+    .vehicle-container {
+      width: 320px;
+      margin: 20px auto;
+      text-align: center;
+    }
+
+    /* Estilo de la imagen del vehículo */
+    .vehicle-image {
+      width: 100%;
+      height: 200px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      overflow: hidden;
+      background: #f9f9f9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .vehicle-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Botones alineados justo debajo de la imagen */
+    .image-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 8px;
+    }
+
+    /* Estilos comunes de botones (tamaño reducido) */
+    .boton {
+      flex: 1;
+      padding: 6px 8px;
+      margin: 0 4px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.8rem;
+      background-color: #555;
+      color: #fff;
+      white-space: nowrap;
+    }
+    .boton:hover {
+      background-color: #444;
+    }
+    .boton imprimir :hover {
+      background-color: #444;
+    }
+
+    /* Variantes de color opcionales */
+    .boton.imprimir { background-color: #0056b3;}
+    .boton.enviar   { background-color: #0056b3; }
+    /*Firma*/
+    .signature-container {
+      font-family: Arial, sans-serif;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+  }
+  
+  .signature-header {
+      font-weight: bold;
+      margin-top: 5px;
+      margin-bottom: 10px;
+  }
+  
+  #signature-pad {
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: 100%;
+      height: 200px;
+      background-color: #fff;
+      position: relative;
+  }
+  
+  canvas {
+      width: 100%;
+      height: 100%;
+      touch-action: none;
+  }
+  
+  .button-container {
+      margin-top: 10px;
+      display: flex;
+      gap: 10px;
+  }
+  
+  button {
+      padding: 8px 15px;
+      background-color: #f5f5f5;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      cursor: pointer;
+  }
+  
+  button:hover {
+      background-color: #0056b3;
+      color: #e08e00;
+  }
+  
+  #clear-button {
+      background-color: #ffeeee;
+  }
+  
+  #save-button {
+      background-color: #eeffee;
+  }
+  
+  .instructions {
+      font-size: 14px;
+      color: #666;
+      margin-top: 5px;
+      margin-bottom: 10px;
+  }
+  /*Fecha y hora*/
+  .datetime-container {
+    font-family: Arial, sans-serif;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.datetime-label {
+    margin-right: 10px;
+    font-weight: normal;
+}
+
+.datetime-field {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    cursor: default;
+}
+
+.datetime-hidden {
+    display: none;
+}
+nav .nav-table {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    justify-content: center; /* Center the navigation items */
+    align-items: center;
+    margin: 0;
+    padding: 0 var(--spacing-medium);
+}
+
+nav .nav-table li {
+    margin: var(--spacing-small) var(--spacing-large);
+}
+
+
+nav .nav-table li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: var(--font-size-base); /* Usando la variable de tamaño de fuente */
+    transition: color 0.3s ease;
+    padding: var(--spacing-small) var(--spacing-medium); /* Add padding to links for better touch targets */
+    border-radius: var(--border-radius); /* Add border-radius to links */
+}
+
+nav .nav-table li a:hover {
+    color: var(--secondary-color);
+    background-color: rgba(255, 255, 255, 0.1); /* Add a subtle background on hover */
+}
+
+nav .nav-table li button {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border: none;
+    padding: var(--spacing-small) var(--spacing-medium);
+    border-radius: var(--border-radius);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+nav .nav-table li button a {
+    color: inherit;
+    font-size: var(--font-size-base);
+    text-decoration: none;
+}
+
+nav .nav-table li button:hover {
+    background-color: #e08e00;
+}
+
+/* Clases para el menú alternativo */
+.menu {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    align-items: center;
+    margin: 0;
+    padding: 0 var(--spacing-medium);
+    width: 100%;
+    background-color: #0056b3;
+}
+
+nav .menu li {
+    margin: var(--spacing-small) var(--spacing-large);
+}
+
+nav .menu li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    background-color: #0056b3;
+    font-weight: bold;
+    font-size: var(--font-size-base);
+    transition: color 0.3s ease;
+    padding: var(--spacing-small) var(--spacing-medium);
+    border-radius: var(--border-radius);
+}
+
+/* Clases para elementos de navegación posicionados */
+.inicio {
+    position: absolute;
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    left: 500px;
+    top: 20px;
+}
+
+.cita {
+    position: absolute;
+    left: 900px;
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    top: 20px;
+}
+
+.loginempleados {
+    position: absolute;
+    left: 1500px;
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    top: 35px;
+    background-color: #e08e00;
+    color: white;
+    border: #000000;
+}
+
+.inicio:hover {
+    background-color: #0056b3;
+    color: #e08e00;
+}
+
+.cita:hover {
+    background-color: #0056b3;
+    color: #e08e00;
+}
+
+.loginempleados:hover {
+    background-color: #0056b3;
+    color: #e08e00;
+}
+#ITVimg {
+  height: 50px; /* o el tamaño que desees */
+  width: auto;
+}

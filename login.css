@@ -1,0 +1,373 @@
+:root {
+    --primary-color: #0056b3; /* Darker blue */
+    --secondary-color: #f5a000; /* Orange/Yellow */
+    --complementary-color: #a85032; /* Example: Brick-like color */
+    --text-color: #333;
+    --background-color: #f9f9f9;
+    --form-bg: white;
+    --border-radius: 0.5em;
+    --box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.1);
+    --font-family: 'Arial', sans-serif;
+    --spacing-small: 0.5em;
+    --spacing-medium: 1em;
+    --spacing-large: 1.5em;
+    --font-size-base: 1rem;
+    --font-size-large: 1.25rem;
+
+    /* Colores para Modo Oscuro */
+    --dark-background-color: #121212;
+    --dark-text-color: #e0e0e0;
+    --dark-form-bg: #333333;
+    --dark-border-color: #444444;
+    --dark-box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.3);
+    --dark-primary-color: #333333;
+    --dark-secondary-color: #f5a000;
+    --dark-link-color: #f5a000;
+    --dark-button-bg: #f5a000;
+    --dark-button-hover-bg: #e0e0e0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--primary-color);
+    padding: var(--spacing-medium) 0;
+    box-shadow: var(--box-shadow);
+    font-family: var(--font-family);
+    text-align: center;
+}
+
+nav .nav-table {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav .nav-table li {
+    margin: 0 var(--spacing-large);
+}
+
+nav .nav-table li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: var(--font-size-large);
+    transition: color 0.3s ease;
+}
+
+nav .nav-table li a:hover {
+    color: var(--secondary-color);
+}
+
+#ITVimg {
+    width: 6.25em;
+    height: auto;
+    margin: var(--spacing-small);
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; /* Occupy remaining vertical space */
+    padding: var(--spacing-large);
+}
+
+.login-form {
+    background-color: var(--form-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: var(--spacing-large);
+    width: 90%;
+    max-width: 25em; /* Limit form width */
+}
+
+.login-form h1 {
+    text-align: center;
+    margin-bottom: var(--spacing-medium);
+    color: var(--primary-color);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--spacing-medium);
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 0.25em;
+}
+
+.form-group input {
+    padding: var(--spacing-small);
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-base);
+}
+
+.btn-login {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: var(--spacing-small) var(--spacing-medium);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: var(--font-size-base);
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-login:hover {
+    background-color: #e08e00;
+}
+
+.login-form a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.login-form a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: var(--spacing-medium);
+    margin-top: var(--spacing-large);
+}
+
+footer a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    margin: 0 var(--spacing-small);
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 70em;
+    margin: 0 auto;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+    padding: var(--spacing-small);
+    text-align: center;
+    flex: 1;
+}
+
+/* Responsive adjustments for footer */
+@media (max-width: 60em) {
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        width: 100%;
+    }
+}
+
+/* Dark Mode for login page */
+body.dark-mode {
+    background-color: var(--dark-background-color);
+    color: var(--dark-text-color);
+}
+
+body.dark-mode header {
+    background-color: var(--dark-primary-color);
+    box-shadow: var(--dark-box-shadow);
+}
+
+body.dark-mode nav .nav-table li a {
+    color: var(--dark-text-color);
+}
+
+body.dark-mode nav .nav-table li a:hover {
+    color: var(--dark-secondary-color);
+}
+
+body.dark-mode .login-form {
+    background-color: var(--dark-form-bg);
+    box-shadow: var(--dark-box-shadow);
+}
+
+body.dark-mode .login-form h1 {
+    color: var(--dark-secondary-color);
+}
+
+body.dark-mode .form-group label {
+    color: var(--dark-text-color);
+}
+
+body.dark-mode .form-group input {
+    color: var(--dark-text-color);
+    background-color: var(--dark-form-bg);
+    border-color: var(--dark-border-color);
+}
+
+body.dark-mode .btn-login {
+    background-color: var(--dark-secondary-color);
+    color: var(--dark-text-color);
+}
+
+body.dark-mode .btn-login:hover {
+    background-color: #018786;
+}
+
+body.dark-mode .login-form a {
+    color: var(--dark-secondary-color);
+}
+
+body.dark-mode footer {
+    background-color: var(--dark-primary-color);
+    color: var(--dark-text-color);
+}
+nav .nav-table {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    justify-content: center; /* Center the navigation items */
+    align-items: center;
+    margin: 0;
+    padding: 0 var(--spacing-medium);
+}
+
+nav .nav-table li {
+    margin: var(--spacing-small) var(--spacing-large);
+}
+
+
+nav .nav-table li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: var(--font-size-base); /* Usando la variable de tamaño de fuente */
+    transition: color 0.3s ease;
+    padding: var(--spacing-small) var(--spacing-medium); /* Add padding to links for better touch targets */
+    border-radius: var(--border-radius); /* Add border-radius to links */
+}
+
+nav .nav-table li a:hover {
+    color: var(--secondary-color);
+    background-color: rgba(255, 255, 255, 0.1); /* Add a subtle background on hover */
+}
+
+nav .nav-table li button {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border: none;
+    padding: var(--spacing-small) var(--spacing-medium);
+    border-radius: var(--border-radius);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+nav .nav-table li button a {
+    color: inherit;
+    font-size: var(--font-size-base);
+    text-decoration: none;
+}
+
+nav .nav-table li button:hover {
+    background-color: #e08e00;
+}
+
+/* Clases para el menú alternativo */
+.menu {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    align-items: center;
+    margin: 0;
+    padding: 0 var(--spacing-medium);
+    width: 100%;
+    background-color: #0056b3;
+}
+
+nav .menu li {
+    margin: var(--spacing-small) var(--spacing-large);
+}
+
+nav .menu li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    background-color: #0056b3;
+    font-weight: bold;
+    font-size: var(--font-size-base);
+    transition: color 0.3s ease;
+    padding: var(--spacing-small) var(--spacing-medium);
+    border-radius: var(--border-radius);
+}
+
+/* Clases para elementos de navegación posicionados */
+.inicio {
+    position: absolute;
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    left: 500px;
+    top: 20px;
+}
+
+.cita {
+    position: absolute;
+    left: 900px;
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    top: 20px;
+}
+
+.loginempleados {
+    position: absolute;
+    left: 1500px;
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    top: 35px;
+    background-color: #e08e00;
+    color: white;
+    border: #000000;
+}
+
+.inicio:hover {
+    background-color: #0056b3;
+    color: #e08e00;
+}
+
+.cita:hover {
+    background-color: #0056b3;
+    color: #e08e00;
+}
+
+.loginempleados:hover {
+    background-color: #0056b3;
+    color: #e08e00;
+}
+#ITVimg {
+  height: 50px; /* o el tamaño que desees */
+  width: auto;
+}
